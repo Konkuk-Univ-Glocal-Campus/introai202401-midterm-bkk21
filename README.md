@@ -136,10 +136,12 @@
 
 - 잘못 예측한 그래프
 - 가장 잘못 예측한 종류는 `shirt` 로 531개 중 `192개` 로 `36%`를 잘못 예측
+
 ![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/bb43395c-6918-4cec-99a7-e0013e41670d)
 <br><br>
 
 - 가장 잘못 예측한 종류인 Shirt의 결과 그래프
 - 결과를 통해 Shirt를 `38%`만큼 `T-Shirt/top`로 예측했다는 것을 알 수 있음
+
 ![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/2e144c6b-0bdf-47b7-8323-b0b5ab651b7a)
 <br><br>
