@@ -1,9 +1,30 @@
-# [중간고사]<br>
-- 컴퓨터 비전 문제
-- [1. 요구사항](#1.-요구사항)
-- [2. 결과요약](#-2.-결과-요약)
+## # README <br>
+1. 결과 요약
+2. 요구사항
+3. 결과
 
-## 1. 요구사항
+<br>
+
+## 1. 결과 요약
+- 가장 잘 예측한 종류는 `Sandal` 로 `97%` 맞게 예측
+- 가장 잘못 예측한 종류는 `shirt` 로 `63%` 맞게 예측
+
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/1fdad51e-2435-4305-88b3-e0506ba3a23e)
+<br><br>
+
+- 가장 잘못 예측한 종류인 Shirt의 결과 그래프
+- 결과를 통해 Shirt를 `38%`만큼 `T-Shirt/top`로 예측했다는 것을 알 수 있음
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/2e144c6b-0bdf-47b7-8323-b0b5ab651b7a)
+<br><br>
+
+<br>
+
+## 2. 요구사항
+
+**[주제]**<br>
+- 컴퓨터 비전 문제
+
+<br>
 
 **[목표]**<br>
 - 간단한 컨볼루션 신경망(CNN)을 사용하여 이미지 분류 작업을 수행합니다. 이 과제에서는 Fashion-MNIST 데이터셋을 사용합니다.
@@ -47,6 +68,77 @@
 - 모든 플롯과 시각화는 결과 해석과 함께 포함되어야 합니다.
 
 <br><br>
-## 2. 결과요약
 
-(추후 추가)
+## 3. 결과
+
+**[데이터]**<br>
+- `Train` / `Valid` / `Test` 데이터로 분할 및 데이터 개수 확인 <br><br>
+![데이터 개수 확인](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/935a1be9-b70b-4abc-9463-3888e4d7a57a)
+
+- `9개의 인덱스` 확인 <br>
+<img width="1011" alt="image" src="https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/b9f89842-c9a2-4a19-b724-311d7caf3028">
+ <br><br>
+ 
+- 인덱스별 sample 데이터 확인 <br><br>
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/5180f47f-e616-44fe-8381-24f87cd9287e)
+ <br><br>
+
+ - 데이터 종류별 개수 확인 <br><br>
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/77360b93-cde3-449d-a148-f31e80d45440)
+ <br><br>
+
+**[CNN 모델]**<br>
+- 1개의 `컨볼루션 레이어`와 1개의 `풀링 레이어`를 사용
+- `Conv2d` 함수를 통해 컨볼루션 레이어를 생성
+- `MaxPool2d` 함수를 통해 풀링 레이어를 생성
+- `Flatten` 함수를 통해 1차원 행렬로 변경
+- `Linear` 함수를 통해 전결합층 레이어로 넣음
+- `forward(순전파)` 함수에서 Conv2d -> relu -> MaxPool2d -> flatten -> Linear -> log_softmax 의 과정을 거침
+  
+&nbsp;&nbsp;&nbsp;&nbsp;![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/3f87b349-0154-4df8-bda3-3cfedb26b0d0)
+ <br><br>
+
+**[학습]**<br>
+- 학습은 `epoch` 을 10으로 하여 진행
+- 학습은 `train_data` 를 사용하고, 평가는 `valid_data` 를 사용
+- `Acc` 는 높아지고, `Loss` 는 낮아지는 것을 볼 수 있음
+
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/cd396327-4226-48bf-9cfa-796b931145e2)
+ <br><br>
+
+ **[최종 평가]**<br>
+- `Loss` 값과 `Acc` 를 계산
+- 결과를 통해 정확도가 `88%` 로 높게 나온 것을 볼 수 있음
+
+&nbsp;&nbsp;&nbsp;&nbsp;![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/79d2d255-b69c-42e5-88b1-2771d111f56b)
+ <br><br>
+
+ **[결과 확인]**<br>
+- 샘플 데이터 선정하여 결과 확인
+- 해당 샘플은 잘못 예측한 것으로, 정답은 `Shirt` 이지만 `Pullover` 로 예측
+  
+&nbsp;&nbsp;&nbsp;&nbsp;![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/ce1ca88d-d2d7-4e4a-8fb2-af20bb0b0772)
+<br><br>
+
+- Confusion Matrix로 확인
+- 대부분이 올바르게 예측함
+
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/eb0009e2-a8e0-4044-8470-561c2d14dbf6)
+<br><br>
+
+
+- 올바르게 예측한 그래프
+- 가장 잘 예측한 종류는 `Sandal` 로 507개 중 `494개` 로 `97%` 맞게 예측 
+
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/1fdad51e-2435-4305-88b3-e0506ba3a23e)
+<br><br>
+
+- 잘못 예측한 그래프
+- 가장 잘못 예측한 종류는 `shirt` 로 531개 중 `192개` 로 `36%`를 잘못 예측
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/bb43395c-6918-4cec-99a7-e0013e41670d)
+<br><br>
+
+- 가장 잘못 예측한 종류인 Shirt의 결과 그래프
+- 결과를 통해 Shirt를 `38%`만큼 `T-Shirt/top`로 예측했다는 것을 알 수 있음
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/2e144c6b-0bdf-47b7-8323-b0b5ab651b7a)
+<br><br>
