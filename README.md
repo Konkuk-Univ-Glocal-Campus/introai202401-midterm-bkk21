@@ -6,16 +6,16 @@
 <br>
 
 ## 1. 결과 요약
-- 가장 잘 예측한 종류는 `Sandal` 로 `97%` 맞게 예측
-- 가장 잘못 예측한 종류는 `shirt` 로 `63%` 맞게 예측
+- 가장 예측을 잘 한 종류는 `Sandal` 로 `98%` 맞게 예측
+- 가장 예측을 잘 못한 종류는 `shirt` 로 `74%` 맞게 예측
 
-![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/1fdad51e-2435-4305-88b3-e0506ba3a23e)
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/1f5e489b-a693-476a-ab84-bc9170d4f3a3)
 <br><br>
 
 - 가장 잘못 예측한 종류인 Shirt의 결과 그래프
-- 결과를 통해 Shirt를 `38%`만큼 `T-Shirt/top`로 예측했다는 것을 알 수 있음
+- 결과를 통해 Shirt를 `36%`만큼 `T-Shirt/top`로 예측했다는 것을 알 수 있음
 
-![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/2e144c6b-0bdf-47b7-8323-b0b5ab651b7a)
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/efe3abd7-ffad-4329-b54e-fccce1f06158)
 <br><br>
 
 <br>
@@ -104,14 +104,15 @@
 - 학습은 `train_data` 를 사용하고, 평가는 `valid_data` 를 사용
 - `Acc` 는 높아지고, `Loss` 는 낮아지는 것을 볼 수 있음
 
-![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/cd396327-4226-48bf-9cfa-796b931145e2)
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/23a63a00-b481-4f67-8fdd-bb37ccd7073f)
+
  <br><br>
 
  **[최종 평가]**<br>
 - `Loss` 값과 `Acc` 를 계산
 - 결과를 통해 정확도가 `88%` 로 높게 나온 것을 볼 수 있음
 
-&nbsp;&nbsp;&nbsp;&nbsp;![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/79d2d255-b69c-42e5-88b1-2771d111f56b)
+&nbsp;&nbsp;&nbsp;&nbsp;<img width="202" alt="image" src="https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/f87ec582-1f70-461a-9cf7-554848fa8299">
  <br><br>
 
  **[결과 확인]**<br>
@@ -124,24 +125,24 @@
 - Confusion Matrix로 확인
 - 대부분이 올바르게 예측함
 
-![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/eb0009e2-a8e0-4044-8470-561c2d14dbf6)
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/11d18be0-da24-4c9c-a26f-a242b69a4e7a)
 <br><br>
 
 
 - 올바르게 예측한 그래프
-- 가장 잘 예측한 종류는 `Sandal` 로 507개 중 `494개` 로 `97%` 맞게 예측 
+- 가장 잘 예측한 종류는 `Sandal` 로 507개 중 `497개` 로 `98%` 맞게 예측 
 
-![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/1fdad51e-2435-4305-88b3-e0506ba3a23e)
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/8e6e58f7-82e4-4af0-9f4a-51c3fffdfdb1)
 <br><br>
 
 - 잘못 예측한 그래프
-- 가장 잘못 예측한 종류는 `shirt` 로 531개 중 `192개` 로 `36%`를 잘못 예측
+- 가장 잘못 예측한 종류는 `shirt` 로 531개 중 `136개` 로 `25%`를 잘못 예측
 
-![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/bb43395c-6918-4cec-99a7-e0013e41670d)
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/3e20f95a-5e3b-4d84-9377-c043d554b7be)
 <br><br>
 
 - 가장 잘못 예측한 종류인 Shirt의 결과 그래프
-- 결과를 통해 Shirt를 `38%`만큼 `T-Shirt/top`로 예측했다는 것을 알 수 있음
+- 결과를 통해 Shirt를 `36%`만큼 `T-Shirt/top`로 예측했다는 것을 알 수 있음
 
-![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/2e144c6b-0bdf-47b7-8323-b0b5ab651b7a)
+![image](https://github.com/Konkuk-Univ-Glocal-Campus/introai202401-midterm-bkk21/assets/108513540/6c1fbc7e-13e5-4cd5-a3f3-97b4fdb342d7)
 <br><br>
